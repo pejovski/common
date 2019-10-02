@@ -5,8 +5,8 @@ services:
     hostname: rabbitmq
     container_name: rabbitmq
     environment:
-      - RABBITMQ_DEFAULT_USER=pejovski
-      - RABBITMQ_DEFAULT_PASS=pejovski
+      - RABBITMQ_DEFAULT_USER=radozda
+      - RABBITMQ_DEFAULT_PASS=radozda
       - RABBITMQ_ERLANG_COOKIE="fdas98uf89d9fda1865fdas"
     ports:
       - "15672:15672"
@@ -15,10 +15,10 @@ services:
       NAME: "rabbitmq"
     volumes:
       - rabbitmqdata:/var/lib/rabbitmq
-      -
-  volumes:
-    rabbitmqdata:
-      driver: local
+
+volumes:
+  rabbitmqdata:
+    driver: local
 
 
 
